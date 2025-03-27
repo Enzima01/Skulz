@@ -8,25 +8,22 @@
 int main() {
     setlocale(LC_ALL, "Portuguese_Brazil.1252");
 
-
     srand((unsigned int) time(NULL));
 
-    int funcao , operacao_calc , operacao_unimedida , operacao_temperatura , operacao_velocidade, operacao_comprimento, operacao_peso;
+    int funcao, operacao_calc, operacao_unimedida, operacao_temperatura, operacao_velocidade, operacao_comprimento, operacao_peso;
     int celsius_1, fahrenheit_1, kelvin_1;
-    float kmh, ms , mph;
-    float km, m , cm;
-    float kg , g , mg;
-    float n1 , n2 , resultado;
-    float peso,altura, imc;
+    float kmh, ms, mph;
+    float km, m, cm;
+    float kg, g, mg;
+    float n1, n2, resultado;
+    float peso, altura, imc;
     int numero, equacao, easteregg;
-    int sorteio = rand() % 2;
     char letra;
     char resposta;
-    float a, b, c, delta, x, x1 ,x2;
-    float a1, b1, xeq1;
+    float a, b, c, delta, x, x1, x2;
+    int sorteio = rand() % 2;
 
-    inicio:
-
+inicio:
     printf("       ______\n");
     printf("    .-'      `-.\n");
     printf("   /            \\\n");
@@ -45,11 +42,9 @@ int main() {
     printf("  ___) | . \\| |_| | |___ / /_   \n");
     printf(" |____/|_|\\_\\\\___/|_____/____|  \n");
 
-    printf(" \n\nAperter ENTER para iniciar...");
+    printf(" \n\nAperte ENTER para iniciar...");
     getchar();
     system("cls");
-
-
 
     printf("  ____  _  ___   _ _     _____  \n");
     printf(" / ___|| |/ / | | | |   |__  /  \n");
@@ -62,12 +57,9 @@ int main() {
     printf(" 4) CHUTE PARA ALTERNATIVAS\n\n");
     printf(" 5) SIM OU NÃO\n\n");
     printf("Digite o número para a determinada função: ");
-    scanf("%d" , &funcao);
+    scanf("%d", &funcao);
 
-
-
-if(funcao == 1){
-
+    if (funcao == 1) {
         system("cls");
         printf("  ____  _  ___   _ _     _____  \n");
         printf(" / ___|| |/ / | | | |   |__  /  \n");
@@ -75,70 +67,66 @@ if(funcao == 1){
         printf("  ___) | . \\| |_| | |___ / /_   \n");
         printf(" |____/|_|\\_\\\\___/|_____/____|  \n\n\n");
         printf("| CALCULADORA | \n \n");
-        printf(" 1) SOMA \n\n" );
+        printf(" 1) SOMA \n\n");
         printf(" 2) SUBTRAÇÃO \n\n");
         printf(" 3) MULTIPLICAÇÃO \n\n");
         printf(" 4) DIVISÃO \n\n");
         printf(" 5) EQUAÇÕES \n\n");
 
-        printf("Digite o número (1-4) para a determinada operação: ");
-        scanf("%d" , &operacao_calc);
-}
+        printf("Digite o número (1-5) para a determinada operação: ");
+        scanf("%d", &operacao_calc);
 
-        if (operacao_calc == 1){
-
-        system("cls");
-        printf(" | SOMA |\n\n");
-        printf(" Digite o primeiro número: ");
-        scanf("%f",&n1);
-        printf("\n Digite o segundo número: ");
-        scanf("%f",&n2);
-        resultado = n1 + n2;
-        printf("\n------------------");
-        printf("\n RESULTADO: %.2f" , resultado);
-        printf("\n------------------");
-        }
-
-        if (operacao_calc == 2){
-        system("cls");
-        printf(" | SUBTRAÇÃO |\n\n");
-        printf(" Digite o primeiro número: ");
-        scanf("%f",&n1);
-        printf("\n Digite o segundo número: ");
-        scanf("%f",&n2);
-        resultado = n1 - n2;
-        printf("\n------------------");
-        printf("\n RESULTADO: %.2f" , resultado);
-        printf("\n------------------");
-        }
-
-        if (operacao_calc == 3){
-        system("cls");
-        printf(" | MULTIPLICACÃO | \n\n");
-        printf(" Digite o primeiro número: ");
-        scanf("%f",&n1);
-        printf("\n Digite o segundo número: ");
-        scanf("%f",&n2);
-        resultado = n1 * n2;
-        printf("\n------------------");
-        printf("\n RESULTADO: %.2f" , resultado);
-        printf("\n------------------");
-        }
-
-        if (operacao_calc == 4){
-        system("cls");
-        printf(" | DIVISÃO | \n\n");
-        printf(" Digite o primeiro número: ");
-        scanf("%f",&n1);
-        printf("\n Digite o segundo número: ");
-        scanf("%f",&n2);
-        resultado = n1 / n2;
-        printf("\n------------------");
-        printf("\n RESULTADO: %.2f" , resultado);
-        printf("\n------------------");
-        }
-
-        if(operacao_calc == 5){
+        if (operacao_calc == 1) {
+            system("cls");
+            printf(" | SOMA |\n\n");
+            printf(" Digite o primeiro número: ");
+            scanf("%f", &n1);
+            printf("\n Digite o segundo número: ");
+            scanf("%f", &n2);
+            resultado = n1 + n2;
+            printf("\n------------------");
+            printf("\n RESULTADO: %.2f", resultado);
+            printf("\n------------------");
+        } else if (operacao_calc == 2) {
+            system("cls");
+            printf(" | SUBTRAÇÃO |\n\n");
+            printf(" Digite o primeiro número: ");
+            scanf("%f", &n1);
+            printf("\n Digite o segundo número: ");
+            scanf("%f", &n2);
+            resultado = n1 - n2;
+            printf("\n------------------");
+            printf("\n RESULTADO: %.2f", resultado);
+            printf("\n------------------");
+        } else if (operacao_calc == 3) {
+            system("cls");
+            printf(" | MULTIPLICAÇÃO | \n\n");
+            printf(" Digite o primeiro número: ");
+            scanf("%f", &n1);
+            printf("\n Digite o segundo número: ");
+            scanf("%f", &n2);
+            resultado = n1 * n2;
+            printf("\n------------------");
+            printf("\n RESULTADO: %.2f", resultado);
+            printf("\n------------------");
+        } else if (operacao_calc == 4) {
+            system("cls");
+            printf(" | DIVISÃO | \n\n");
+            printf(" Digite o primeiro número: ");
+            scanf("%f", &n1);
+            printf("\n Digite o segundo número: ");
+            scanf("%f", &n2);
+            if (n2 != 0) {
+                resultado = n1 / n2;
+                printf("\n------------------");
+                printf("\n RESULTADO: %.2f", resultado);
+                printf("\n------------------");
+            } else {
+                printf("\n------------------");
+                printf("\n ERRO: Divisão por zero!");
+                printf("\n------------------");
+            }
+        } else if (operacao_calc == 5) {
             system("cls");
             printf("  ____  _  ___   _ _     _____  \n");
             printf(" / ___|| |/ / | | | |   |__  /  \n");
@@ -150,7 +138,7 @@ if(funcao == 1){
             printf(" 2) EQUAÇÃO DO 2 GRAU\n\n");
             printf("Digite o número (1-2) para a determinada operação: ");
             scanf("%d", &equacao);
-            if(equacao == 1){
+            if (equacao == 1) {
                 system("cls");
                 printf("  ____  _  ___   _ _     _____  \n");
                 printf(" / ___|| |/ / | | | |   |__  /  \n");
@@ -159,24 +147,23 @@ if(funcao == 1){
                 printf(" |____/|_|\\_\\\\___/|_____/____|  \n\n\n");
                 printf(" | EQUAÇÃO DO 1 GRAU |\n\n");
                 printf(" Digite o valor de A: ");
-                scanf("%f", &a1);
+                scanf("%f", &a);
                 printf("\n Digite o valor de B: ");
-                scanf("%f", &b1);
-                if (a1 == 0) {
-                    if (b1 == 0) {
-                    printf("A equação tem infinitas soluções\n");
-                    }   else {
-                            printf("A equação não tem solução!\n");
-                        }
-                }           else {
-                                xeq1 = -b1 / a1;
-                                printf("\n Ax + B = 0\n");
-                                printf("\n X = - B / A\n");
-                                printf("\n X = - %.2f / %.2f\n\n", b1,a1);
-                                printf(" X = %.2f\n", xeq1);
-                            }
-            }
-            if(equacao == 2){
+                scanf("%f", &b);
+                if (a == 0) {
+                    if (b == 0) {
+                        printf("A equação tem infinitas soluções\n");
+                    } else {
+                        printf("A equação não tem solução!\n");
+                    }
+                } else {
+                    x = -b / a;
+                    printf("\n Ax + B = 0\n");
+                    printf("\n X = - B / A\n");
+                    printf("\n X = - %.2f / %.2f\n\n", b, a);
+                    printf(" X = %.2f\n", x);
+                }
+            } else if (equacao == 2) {
                 system("cls");
                 printf("  ____  _  ___   _ _     _____  \n");
                 printf(" / ___|| |/ / | | | |   |__  /  \n");
@@ -186,56 +173,55 @@ if(funcao == 1){
                 printf(" | EQUAÇÃO DO 2 GRAU |\n\n");
                 printf(" Digite o valor de A: ");
                 scanf("%f", &a);
-                if(a  == 0){
-                printf("\n\n Imposível calcular! A negativo!!");
+                if (a == 0) {
+                    printf("\n\n Impossível calcular! A negativo!!");
+                } else {
+                    printf("\n Digite o valor de B: ");
+                    scanf("%f", &b);
+                    printf("\n Digite o valor de C: ");
+                    scanf("%f", &c);
+                    printf("\n==============================\n");
+                    printf("        | BHASKARA |\n");
+                    delta = (b * b) - 4 * a * c;
+                    printf("\n (B * B) - 4 * A * C");
+                    printf("\n\n (%.2f * %.2f) - 4 * %.2f * %.2f\n", b, b, a, c);
+
+                    if (delta < 0) {
+                        printf("\n Delta = %.2f", delta);
+                        printf("\n\n Impossível calcular! Delta negativo!!");
+                    } else {
+                        printf("\n Delta é igual a: %.2f", delta);
+                        printf("\n\n==============================\n");
+                        printf("   | DESCOBRIR AS RAÍZES |\n");
+                        printf("\n X = (-B +- raiz de Delta) / 2 * A\n");
+                        printf("\n X = (- %.2f +- raiz de %.2f) / 2 * %.2f", b, delta, a);
+                        x1 = (-b + sqrt(delta)) / (2 * a);
+                        x2 = (-b - sqrt(delta)) / (2 * a);
+                        printf("\n\n X1 = %.2f", x1);
+                        printf("\n\n X2 = %.2f", x2);
+                    }
                 }
-            else{
-                printf("\n Digite o valor de B: ");
-                scanf("%f", &b);
-                printf("\n Digite o valor de C: ");
-                scanf("%f", &c);
-                printf("\n==============================\n");
-                printf("        | BHASKARA |\n");
-                delta = (b * b) -4 * a * c;
-                printf("\n (B * B) -4 * A * C");
-                printf("\n\n (%.2f * %.2f) -4 * %.2f * %.2f\n" , b, b, a, c);
-
-            if(delta < 0){
-            printf("\n Delta = %.2f", delta);
-            printf("\n\n Imposível calcular! Delta negativo!!");
-            }
-            else{
-                printf("\n Delta é igual a: %.2f", delta);
-                printf("\n\n==============================\n");
-                printf("   | DESCOBRIR AS RAÍZES |\n");
-                printf("\n X = (-B +- raiz de Delta) / 2 * A\n");
-                printf("\n X = (- %.2f +- raiz de %2.f) / 2 * %.2f", b, delta, a);
-                x1 = (-b + sqrt(delta)) / (2 * a);
-                x2 = (-b - sqrt(delta)) / (2 * a);
-                printf("\n\n X1 = %.2f", x1);
-                printf("\n\n X2 = %.2f", x2);
-            }
-            }
-
             }
         }
+    }
 
-if(funcao == 2){
-    system("cls");
-    printf("  ____  _  ___   _ _     _____  \n");
-    printf(" / ___|| |/ / | | | |   |__  /  \n");
-    printf(" \\___ \\| ' /| | | | |     / /   \n");
-    printf("  ___) | . \\| |_| | |___ / /_   \n");
-    printf(" |____/|_|\\_\\\\___/|_____/____|  \n\n\n");
-    printf("| CONVERSOR DE MEDIDAS |\n\n");
-    printf(" 1) TEMPERATURA \n\n");
-    printf(" 2) VELOCIDADE \n\n");
-    printf(" 3) COMPRIMENTO \n\n");
-    printf(" 4) PESO \n\n");
-    printf("Digite o número (1-4) para a determinada operação: ");
-    scanf("%d" , &operacao_unimedida);
-}
-if(operacao_unimedida == 1){
+    if (funcao == 2) {
+        system("cls");
+        printf("  ____  _  ___   _ _     _____  \n");
+        printf(" / ___|| |/ / | | | |   |__  /  \n");
+        printf(" \\___ \\| ' /| | | | |     / /   \n");
+        printf("  ___) | . \\| |_| | |___ / /_   \n");
+        printf(" |____/|_|\\_\\\\___/|_____/____|  \n\n\n");
+        printf("| CONVERSOR DE MEDIDAS |\n\n");
+        printf(" 1) TEMPERATURA \n\n");
+        printf(" 2) VELOCIDADE \n\n");
+        printf(" 3) COMPRIMENTO \n\n");
+        printf(" 4) PESO \n\n");
+        printf("Digite o número (1-4) para a determinada operação: ");
+        scanf("%d", &operacao_unimedida);
+    }
+
+    if (operacao_unimedida == 1) {
         system("cls");
         printf("  ____  _  ___   _ _     _____  \n");
         printf(" / ___|| |/ / | | | |   |__  /  \n");
@@ -263,110 +249,106 @@ if(operacao_unimedida == 1){
         printf(" -----------------------------------\n\n");
 
         printf("Digite o número (1-6) para a determinada operação: ");
-        scanf("%d" , &operacao_temperatura);
+        scanf("%d", &operacao_temperatura);
+    }
 
-}
-        if(operacao_temperatura == 1){
-            system("cls");
-            printf("  ____  _  ___   _ _     _____  \n");
-            printf(" / ___|| |/ / | | | |   |__  /  \n");
-            printf(" \\___ \\| ' /| | | | |     / /   \n");
-            printf("  ___) | . \\| |_| | |___ / /_   \n");
-            printf(" |____/|_|\\_\\\\___/|_____/____|  \n\n\n");
-            printf("| Celsius(°C) --> Fahrenheit(°F) |\n\n");
-            printf(" Digite o valor da temperatura (°C): ");
-            scanf("%d", &celsius_1);
-            fahrenheit_1 = (celsius_1 * 9/5) + 32;
-            printf("\n-----------------------------");
-            printf("\n VALOR EM FAHRENHEIT: %d°F",fahrenheit_1);
-            printf("\n-----------------------------");
-        }
+    if (operacao_temperatura == 1) {
+        system("cls");
+        printf("  ____  _  ___   _ _     _____  \n");
+        printf(" / ___|| |/ / | | | |   |__  /  \n");
+        printf(" \\___ \\| ' /| | | | |     / /   \n");
+        printf("  ___) | . \\| |_| | |___ / /_   \n");
+        printf(" |____/|_|\\_\\\\___/|_____/____|  \n\n\n");
+        printf("| Celsius(°C) --> Fahrenheit(°F) |\n\n");
+        printf(" Digite o valor da temperatura (°C): ");
+        scanf("%d", &celsius_1);
+        fahrenheit_1 = (celsius_1 * 9 / 5) + 32;
+        printf("\n-----------------------------");
+        printf("\n VALOR EM FAHRENHEIT: %d°F", fahrenheit_1);
+        printf("\n-----------------------------");
+    }
 
-        if(operacao_temperatura == 2){
-            system("cls");
-            printf("  ____  _  ___   _ _     _____  \n");
-            printf(" / ___|| |/ / | | | |   |__  /  \n");
-            printf(" \\___ \\| ' /| | | | |     / /   \n");
-            printf("  ___) | . \\| |_| | |___ / /_   \n");
-            printf(" |____/|_|\\_\\\\___/|_____/____|  \n\n\n");
-            printf("| Celsius(°C) --> Kelvin(K) |\n\n");
-            printf(" Digite o valor da temperatura (°C): ");
-            scanf("%d", &celsius_1);
-            kelvin_1 = celsius_1 + 273;
-            printf("\n-----------------------------");
-            printf("\n VALOR EM KELVIN: %dK",kelvin_1);
-            printf("\n-----------------------------");
-        }
+    if (operacao_temperatura == 2) {
+        system("cls");
+        printf("  ____  _  ___   _ _     _____  \n");
+        printf(" / ___|| |/ / | | | |   |__  /  \n");
+        printf(" \\___ \\| ' /| | | | |     / /   \n");
+        printf("  ___) | . \\| |_| | |___ / /_   \n");
+        printf(" |____/|_|\\_\\\\___/|_____/____|  \n\n\n");
+        printf("| Celsius(°C) --> Kelvin(K) |\n\n");
+        printf(" Digite o valor da temperatura (°C): ");
+        scanf("%d", &celsius_1);
+        kelvin_1 = celsius_1 + 273.15;
+        printf("\n-----------------------------");
+        printf("\n VALOR EM KELVIN: %.2fK", kelvin_1);
+        printf("\n-----------------------------");
+    }
 
-        if(operacao_temperatura == 3){
-            system("cls");
-            printf("  ____  _  ___   _ _     _____  \n");
-            printf(" / ___|| |/ / | | | |   |__  /  \n");
-            printf(" \\___ \\| ' /| | | | |     / /   \n");
-            printf("  ___) | . \\| |_| | |___ / /_   \n");
-            printf(" |____/|_|\\_\\\\___/|_____/____|  \n\n\n");
-            printf("| Fahrenheit(°F) --> Celsius(°C) |\n\n");
-            printf(" Digite o valor da temperatura (°F): ");
-            scanf("%d", &fahrenheit_1);
-            celsius_1 = (fahrenheit_1 - 32) * 5/9;
-            printf("\n-----------------------------");
-            printf("\n VALOR EM CELSIUS: %d°C",celsius_1);
-            printf("\n-----------------------------");
+    if (operacao_temperatura == 3) {
+        system("cls");
+        printf("  ____  _  ___   _ _     _____  \n");
+        printf(" / ___|| |/ / | | | |   |__  /  \n");
+        printf(" \\___ \\| ' /| | | | |     / /   \n");
+        printf("  ___) | . \\| |_| | |___ / /_   \n");
+        printf(" |____/|_|\\_\\\\___/|_____/____|  \n\n\n");
+        printf("| Fahrenheit(°F) --> Celsius(°C) |\n\n");
+        printf(" Digite o valor da temperatura (°F): ");
+        scanf("%d", &fahrenheit_1);
+        celsius_1 = (fahrenheit_1 - 32) * 5 / 9;
+        printf("\n-----------------------------");
+        printf("\n VALOR EM CELSIUS: %d°C", celsius_1);
+        printf("\n-----------------------------");
+    }
 
-        }
+    if (operacao_temperatura == 4) {
+        system("cls");
+        printf("  ____  _  ___   _ _     _____  \n");
+        printf(" / ___|| |/ / | | | |   |__  /  \n");
+        printf(" \\___ \\| ' /| | | | |     / /   \n");
+        printf("  ___) | . \\| |_| | |___ / /_   \n");
+        printf(" |____/|_|\\_\\\\___/|_____/____|  \n\n\n");
+        printf("| Fahrenheit(°F) --> Kelvin(K) |\n\n");
+        printf(" Digite o valor da temperatura (°F): ");
+        scanf("%d", &fahrenheit_1);
+        kelvin_1 = (fahrenheit_1 - 32) * 5 / 9 + 273.15;
+        printf("\n-----------------------------");
+        printf("\n VALOR EM KELVIN: %.2fK", kelvin_1);
+        printf("\n-----------------------------");
+    }
 
-        if(operacao_temperatura == 4){
-            system("cls");
-            printf("  ____  _  ___   _ _     _____  \n");
-            printf(" / ___|| |/ / | | | |   |__  /  \n");
-            printf(" \\___ \\| ' /| | | | |     / /   \n");
-            printf("  ___) | . \\| |_| | |___ / /_   \n");
-            printf(" |____/|_|\\_\\\\___/|_____/____|  \n\n\n");
-            printf("| Fahrenheit(°F) --> Kelvin(K) |\n\n");
-            printf(" Digite o valor da temperatura (°F): ");
-            scanf("%d", &fahrenheit_1);
-            kelvin_1 = (fahrenheit_1 - 32) * 5/9 + 273;
-            printf("\n-----------------------------");
-            printf("\n VALOR EM KELVIN: %d°K",kelvin_1);
-            printf("\n-----------------------------");
+    if (operacao_temperatura == 5) {
+        system("cls");
+        printf("  ____  _  ___   _ _     _____  \n");
+        printf(" / ___|| |/ / | | | |   |__  /  \n");
+        printf(" \\___ \\| ' /| | | | |     / /   \n");
+        printf("  ___) | . \\| |_| | |___ / /_   \n");
+        printf(" |____/|_|\\_\\\\___/|_____/____|  \n\n\n");
+        printf("| Kelvin(K) --> Celsius(°C) |\n\n");
+        printf(" Digite o valor da temperatura (K): ");
+        scanf("%d", &kelvin_1);
+        celsius_1 = kelvin_1 - 273.15;
+        printf("\n-----------------------------");
+        printf("\n VALOR EM CELSIUS: %.2f°C", celsius_1);
+        printf("\n-----------------------------");
+    }
 
-        }
+    if (operacao_temperatura == 6) {
+        system("cls");
+        printf("  ____  _  ___   _ _     _____  \n");
+        printf(" / ___|| |/ / | | | |   |__  /  \n");
+        printf(" \\___ \\| ' /| | | | |     / /   \n");
+        printf("  ___) | . \\| |_| | |___ / /_   \n");
+        printf(" |____/|_|\\_\\\\___/|_____/____|  \n\n\n");
+        printf("| Kelvin(K) --> Fahrenheit(°F) |\n\n");
+        printf(" Digite o valor da temperatura (K): ");
+        scanf("%d", &kelvin_1);
+        fahrenheit_1 = (kelvin_1 - 273.15) * 9 / 5 + 32;
+        printf("\n-----------------------------");
+        printf("\n VALOR EM FAHRENHEIT: %.2f°F", fahrenheit_1);
+        printf("\n-----------------------------");
+    }
 
-        if(operacao_temperatura == 5){
-            system("cls");
-            printf("  ____  _  ___   _ _     _____  \n");
-            printf(" / ___|| |/ / | | | |   |__  /  \n");
-            printf(" \\___ \\| ' /| | | | |     / /   \n");
-            printf("  ___) | . \\| |_| | |___ / /_   \n");
-            printf(" |____/|_|\\_\\\\___/|_____/____|  \n\n\n");
-            printf("| Kelvin(K) --> Celsius(°C) |\n\n");
-            printf(" Digite o valor da temperatura (K): ");
-            scanf("%d", &kelvin_1);
-            celsius_1 = kelvin_1 - 273;
-            printf("\n-----------------------------");
-            printf("\n VALOR EM CELSIUS: %d°C",celsius_1);
-            printf("\n-----------------------------");
-
-        }
-
-        if(operacao_temperatura == 6){
-            system("cls");
-            printf("  ____  _  ___   _ _     _____  \n");
-            printf(" / ___|| |/ / | | | |   |__  /  \n");
-            printf(" \\___ \\| ' /| | | | |     / /   \n");
-            printf("  ___) | . \\| |_| | |___ / /_   \n");
-            printf(" |____/|_|\\_\\\\___/|_____/____|  \n\n\n");
-            printf("| Kelvin(K) --> Fahrenheit(°F) |\n\n");
-            printf(" Digite o valor da temperatura (K): ");
-            scanf("%d", &kelvin_1);
-            fahrenheit_1 = (kelvin_1 - 273) * 9/5 + 32;
-            printf("\n-----------------------------");
-            printf("\n VALOR EM FAHRENHEIT: %d°F",fahrenheit_1);
-            printf("\n-----------------------------");
-
-        }
-
-if(operacao_unimedida == 2){
+    if (operacao_unimedida == 2) {
         system("cls");
         printf("  ____  _  ___   _ _     _____  \n");
         printf(" / ___|| |/ / | | | |   |__  /  \n");
@@ -394,9 +376,9 @@ if(operacao_unimedida == 2){
         printf(" ------------------------------------------------------------\n\n");
 
         printf("Digite o número (1-6) para a determinada operação: ");
-        scanf("%d" , &operacao_velocidade);
+        scanf("%d", &operacao_velocidade);
 
-        if(operacao_velocidade == 1){
+        if (operacao_velocidade == 1) {
             system("cls");
             printf("  ____  _  ___   _ _     _____  \n");
             printf(" / ___|| |/ / | | | |   |__  /  \n");
@@ -412,7 +394,7 @@ if(operacao_unimedida == 2){
             printf("\n----------------------------------------");
         }
 
-        if(operacao_velocidade == 2){
+        if (operacao_velocidade == 2) {
             system("cls");
             printf("  ____  _  ___   _ _     _____  \n");
             printf(" / ___|| |/ / | | | |   |__  /  \n");
@@ -422,13 +404,13 @@ if(operacao_unimedida == 2){
             printf("| Quilômetros por hora (Km/h) --> Milhas por hora (mph) |\n\n");
             printf(" Digite o valor da velocidade (Km/h): ");
             scanf("%f", &kmh);
-            mph = kmh/1.609;
+            mph = kmh / 1.609;
             printf("\n----------------------------------------");
-            printf("\n VALOR EM MILHAS POR SEGUNDO: %.2f mph", mph);
+            printf("\n VALOR EM MILHAS POR HORA: %.2f mph", mph);
             printf("\n----------------------------------------");
         }
 
-        if(operacao_velocidade == 3){
+        if (operacao_velocidade == 3) {
             system("cls");
             printf("  ____  _  ___   _ _     _____  \n");
             printf(" / ___|| |/ / | | | |   |__  /  \n");
@@ -440,12 +422,11 @@ if(operacao_unimedida == 2){
             scanf("%f", &ms);
             kmh = ms * 3.6;
             printf("\n--------------------------------------------");
-            printf("\n VALOR EM QUILÔMETROS POR HORAS: %.2f Km/h", kmh);
+            printf("\n VALOR EM QUILÔMETROS POR HORA: %.2f Km/h", kmh);
             printf("\n--------------------------------------------");
-
         }
 
-         if(operacao_velocidade == 4){
+        if (operacao_velocidade == 4) {
             system("cls");
             printf("  ____  _  ___   _ _     _____  \n");
             printf(" / ___|| |/ / | | | |   |__  /  \n");
@@ -457,11 +438,11 @@ if(operacao_unimedida == 2){
             scanf("%f", &ms);
             mph = ms * 2.237;
             printf("\n----------------------------------------");
-            printf("\n VALOR EM MILHAS POR SEGUNDO: %.2f mph", mph);
+            printf("\n VALOR EM MILHAS POR HORA: %.2f mph", mph);
             printf("\n----------------------------------------");
-         }
+        }
 
-         if(operacao_velocidade == 5){
+        if (operacao_velocidade == 5) {
             system("cls");
             printf("  ____  _  ___   _ _     _____  \n");
             printf(" / ___|| |/ / | | | |   |__  /  \n");
@@ -473,11 +454,11 @@ if(operacao_unimedida == 2){
             scanf("%f", &mph);
             kmh = mph * 1.609;
             printf("\n--------------------------------------------");
-            printf("\n VALOR EM QUILÔMETROS POR HORAS: %.2f Km/h", kmh);
+            printf("\n VALOR EM QUILÔMETROS POR HORA: %.2f Km/h", kmh);
             printf("\n--------------------------------------------");
         }
 
-        if(operacao_velocidade == 6){
+        if (operacao_velocidade == 6) {
             system("cls");
             printf("  ____  _  ___   _ _     _____  \n");
             printf(" / ___|| |/ / | | | |   |__  /  \n");
@@ -492,136 +473,136 @@ if(operacao_unimedida == 2){
             printf("\n VALOR EM METROS POR SEGUNDO: %.2f m/s", ms);
             printf("\n----------------------------------------");
         }
-}
+    }
 
+    if (operacao_unimedida == 3) {
+        system("cls");
+        printf("  ____  _  ___   _ _     _____  \n");
+        printf(" / ___|| |/ / | | | |   |__  /  \n");
+        printf(" \\___ \\| ' /| | | | |     / /   \n");
+        printf("  ___) | . \\| |_| | |___ / /_   \n");
+        printf(" |____/|_|\\_\\\\___/|_____/____|  \n\n\n");
+        printf("| CONVERSOR DE COMPRIMENTO | \n\n\n");
+        printf("                   |KM|");
+        printf("\n------------------------------------------\n");
+        printf(" 1) Quilômetros (km) --> Metros (m)\n\n");
+        printf(" 2) Quilômetros (km) --> Centímetros (cm)");
+        printf("\n------------------------------------------\n\n");
 
-if (operacao_unimedida == 3) {
-            system("cls");
-            printf("  ____  _  ___   _ _     _____  \n");
-            printf(" / ___|| |/ / | | | |   |__  /  \n");
-            printf(" \\___ \\| ' /| | | | |     / /   \n");
-            printf("  ___) | . \\| |_| | |___ / /_   \n");
-            printf(" |____/|_|\\_\\\\___/|_____/____|  \n\n\n");
-            printf("| CONVERSOR DE COMPRIMENTO | \n\n\n");
-            printf("                   |KM|");
-            printf("\n------------------------------------------\n");
-            printf(" 1) Quilômetros (km) --> Metros (m)\n\n");
-            printf(" 2) Quilômetros (km) --> Centímetros (cm)");
-            printf("\n------------------------------------------\n\n");
+        printf("                   |M|");
+        printf("\n------------------------------------------\n");
+        printf(" 3) Metros (m) --> Quilômetros (km)\n\n");
+        printf(" 4) Metros (m) --> Centímetros (cm)");
+        printf("\n------------------------------------------\n\n");
 
-            printf("                   |M|");
-            printf("\n------------------------------------------\n");
-            printf(" 3) Metros (m) --> Quilômetros (km)\n\n");
-            printf(" 4) Metros (m) --> Centímetros (cm)");
-            printf("\n------------------------------------------\n\n");
+        printf("                   |CM|");
+        printf("\n------------------------------------------\n");
+        printf(" 5) Centímetros (cm) --> Quilômetros (km)\n\n");
+        printf(" 6) Centímetros (cm) --> Metros (m)");
+        printf("\n------------------------------------------\n\n");
 
-            printf("                   |CM|");
-            printf("\n------------------------------------------\n");
-            printf(" 5) Centímetros (cm) --> Quilômetros (km)\n\n");
-            printf(" 6) Centímetros (cm) --> Metros (m)");
-            printf("\n------------------------------------------\n\n");
+        printf("Digite o número (1-6) para a determinada operação: ");
+        scanf("%d", &operacao_comprimento);
+    }
 
-            printf("Digite o número (1-6) para a determinada operação: ");
-            scanf("%d" , &operacao_comprimento);
-}
-            if(operacao_comprimento == 1){
-                system("cls");
-                printf("  ____  _  ___   _ _     _____  \n");
-                printf(" / ___|| |/ / | | | |   |__  /  \n");
-                printf(" \\___ \\| ' /| | | | |     / /   \n");
-                printf("  ___) | . \\| |_| | |___ / /_   \n");
-                printf(" |____/|_|\\_\\\\___/|_____/____|  \n\n\n");
-                printf("| Quilômetros (km) --> Metros (m) |\n\n");
-                printf(" Digite o valor do comprimento (km): ");
-                scanf("%f", &km);
-                m = km * 1000;
-                printf("\n-----------------------------");
-                printf("\n VALOR EM METROS: %.2f m",m);
-                printf("\n-----------------------------");
-            }
+    if (operacao_comprimento == 1) {
+        system("cls");
+        printf("  ____  _  ___   _ _     _____  \n");
+        printf(" / ___|| |/ / | | | |   |__  /  \n");
+        printf(" \\___ \\| ' /| | | | |     / /   \n");
+        printf("  ___) | . \\| |_| | |___ / /_   \n");
+        printf(" |____/|_|\\_\\\\___/|_____/____|  \n\n\n");
+        printf("| Quilômetros (km) --> Metros (m) |\n\n");
+        printf(" Digite o valor do comprimento (km): ");
+        scanf("%f", &km);
+        m = km * 1000;
+        printf("\n-----------------------------");
+        printf("\n VALOR EM METROS: %.2f m", m);
+        printf("\n-----------------------------");
+    }
 
-            if(operacao_comprimento == 2){
-                system("cls");
-                printf("  ____  _  ___   _ _     _____  \n");
-                printf(" / ___|| |/ / | | | |   |__  /  \n");
-                printf(" \\___ \\| ' /| | | | |     / /   \n");
-                printf("  ___) | . \\| |_| | |___ / /_   \n");
-                printf(" |____/|_|\\_\\\\___/|_____/____|  \n\n\n");
-                printf("| Quilômetros (km) --> Centímetros (cm) |\n\n");
-                printf(" Digite o valor do comprimento (km): ");
-                scanf("%f", &km);
-                cm = km * 100000;
-                printf("\n------------------------------------");
-                printf("\n VALOR EM CENTÍMETROS: %.2f cm",cm);
-                printf("\n------------------------------------");
-            }
+    if (operacao_comprimento == 2) {
+        system("cls");
+        printf("  ____  _  ___   _ _     _____  \n");
+        printf(" / ___|| |/ / | | | |   |__  /  \n");
+        printf(" \\___ \\| ' /| | | | |     / /   \n");
+        printf("  ___) | . \\| |_| | |___ / /_   \n");
+        printf(" |____/|_|\\_\\\\___/|_____/____|  \n\n\n");
+        printf("| Quilômetros (km) --> Centímetros (cm) |\n\n");
+        printf(" Digite o valor do comprimento (km): ");
+        scanf("%f", &km);
+        cm = km * 100000;
+        printf("\n------------------------------------");
+        printf("\n VALOR EM CENTÍMETROS: %.2f cm", cm);
+        printf("\n------------------------------------");
+    }
 
-            if(operacao_comprimento == 3){
-                system("cls");
-                printf("  ____  _  ___   _ _     _____  \n");
-                printf(" / ___|| |/ / | | | |   |__  /  \n");
-                printf(" \\___ \\| ' /| | | | |     / /   \n");
-                printf("  ___) | . \\| |_| | |___ / /_   \n");
-                printf(" |____/|_|\\_\\\\___/|_____/____|  \n\n\n");
-                printf("| Metros (m) --> Quilômetros (km) |\n\n");
-                printf(" Digite o valor do comprimento (m): ");
-                scanf("%f", &m);
-                km = m / 1000;
-                printf("\n------------------------------------");
-                printf("\n VALOR EM QUILÔMETROS: %.2f km",km);
-                printf("\n------------------------------------");
+    if (operacao_comprimento == 3) {
+        system("cls");
+        printf("  ____  _  ___   _ _     _____  \n");
+        printf(" / ___|| |/ / | | | |   |__  /  \n");
+        printf(" \\___ \\| ' /| | | | |     / /   \n");
+        printf("  ___) | . \\| |_| | |___ / /_   \n");
+        printf(" |____/|_|\\_\\\\___/|_____/____|  \n\n\n");
+        printf("| Metros (m) --> Quilômetros (km) |\n\n");
+        printf(" Digite o valor do comprimento (m): ");
+        scanf("%f", &m);
+        km = m / 1000;
+        printf("\n------------------------------------");
+        printf("\n VALOR EM QUILÔMETROS: %.2f km", km);
+        printf("\n------------------------------------");
+    }
 
-            }
+    if (operacao_comprimento == 4) {
+        system("cls");
+        printf("  ____  _  ___   _ _     _____  \n");
+        printf(" / ___|| |/ / | | | |   |__  /  \n");
+        printf(" \\___ \\| ' /| | | | |     / /   \n");
+        printf("  ___) | . \\| |_| | |___ / /_   \n");
+        printf(" |____/|_|\\_\\\\___/|_____/____|  \n");
+                printf("\n\n");
+        printf("| Metros (m) --> Centímetros (cm) |\n\n");
+        printf(" Digite o valor do comprimento (m): ");
+        scanf("%f", &m);
+        cm = m * 100;
+        printf("\n------------------------------------");
+        printf("\n VALOR EM CENTÍMETROS: %.2f cm", cm);
+        printf("\n------------------------------------");
+    }
 
-            if(operacao_comprimento == 4){
-                system("cls");
-                printf("  ____  _  ___   _ _     _____  \n");
-                printf(" / ___|| |/ / | | | |   |__  /  \n");
-                printf(" \\___ \\| ' /| | | | |     / /   \n");
-                printf("  ___) | . \\| |_| | |___ / /_   \n");
-                printf(" |____/|_|\\_\\\\___/|_____/____|  \n\n\n");
-                printf("| Metros (m) --> Centímetros (cm) |\n\n");
-                printf(" Digite o valor do comprimento (m): ");
-                scanf("%f", &m);
-                cm = m * 100;
-                printf("\n------------------------------------");
-                printf("\n VALOR EM CENTÍMETROS: %.2f cm",cm);
-                printf("\n------------------------------------");
-            }
+    if (operacao_comprimento == 5) {
+        system("cls");
+        printf("  ____  _  ___   _ _     _____  \n");
+        printf(" / ___|| |/ / | | | |   |__  /  \n");
+        printf(" \\___ \\| ' /| | | | |     / /   \n");
+        printf("  ___) | . \\| |_| | |___ / /_   \n");
+        printf(" |____/|_|\\_\\\\___/|_____/____|  \n\n\n");
+        printf("| Centímetros (cm) --> Quilômetros (km) |\n\n");
+        printf(" Digite o valor do comprimento (cm): ");
+        scanf("%f", &cm);
+        km = cm / 100000;
+        printf("\n------------------------------------");
+        printf("\n VALOR EM QUILÔMETROS: %.2f km", km);
+        printf("\n------------------------------------");
+    }
 
-            if(operacao_comprimento == 5){
-                system("cls");
-                printf("  ____  _  ___   _ _     _____  \n");
-                printf(" / ___|| |/ / | | | |   |__  /  \n");
-                printf(" \\___ \\| ' /| | | | |     / /   \n");
-                printf("  ___) | . \\| |_| | |___ / /_   \n");
-                printf(" |____/|_|\\_\\\\___/|_____/____|  \n\n\n");
-                printf("| Centímetros (cm) --> Quilômetros (km) |\n\n");
-                printf(" Digite o valor do comprimento (cm): ");
-                scanf("%f", &cm);
-                km = cm / 100000;
-                printf("\n------------------------------------");
-                printf("\n VALOR EM QUILÔMETROS: %.2f km",km);
-                printf("\n------------------------------------");
-            }
+    if (operacao_comprimento == 6) {
+        system("cls");
+        printf("  ____  _  ___   _ _     _____  \n");
+        printf(" / ___|| |/ / | | | |   |__  /  \n");
+        printf(" \\___ \\| ' /| | | | |     / /   \n");
+        printf("  ___) | . \\| |_| | |___ / /_   \n");
+        printf(" |____/|_|\\_\\\\___/|_____/____|  \n\n\n");
+        printf("| Centímetros (cm) --> Metros (m) |\n\n");
+        printf(" Digite o valor do comprimento (cm): ");
+        scanf("%f", &cm);
+        m = cm / 100;
+        printf("\n-----------------------------");
+        printf("\n VALOR EM METROS: %.2f m", m);
+        printf("\n-----------------------------");
+    }
 
-            if(operacao_comprimento == 6){
-                system("cls");
-                printf("  ____  _  ___   _ _     _____  \n");
-                printf(" / ___|| |/ / | | | |   |__  /  \n");
-                printf(" \\___ \\| ' /| | | | |     / /   \n");
-                printf("  ___) | . \\| |_| | |___ / /_   \n");
-                printf(" |____/|_|\\_\\\\___/|_____/____|  \n\n\n");
-                printf("| Centímetros (cm) --> Metros (m) |\n\n");
-                printf(" Digite o valor do comprimento (cm): ");
-                scanf("%f", &cm);
-                m = cm / 100;
-                printf("\n-----------------------------");
-                printf("\n VALOR EM METROS: %.2f m",m);
-                printf("\n-----------------------------");
-            }
-
-if (operacao_unimedida == 4){
+    if (operacao_unimedida == 4) {
         system("cls");
         printf("  ____  _  ___   _ _     _____  \n");
         printf(" / ___|| |/ / | | | |   |__  /  \n");
@@ -649,9 +630,9 @@ if (operacao_unimedida == 4){
         printf("\n-----------------------------------------\n\n");
 
         printf("Digite o número (1-6) para a determinada operação: ");
-        scanf("%d" , &operacao_peso);
+        scanf("%d", &operacao_peso);
 
-        if(operacao_peso == 1){
+        if (operacao_peso == 1) {
             system("cls");
             printf("  ____  _  ___   _ _     _____  \n");
             printf(" / ___|| |/ / | | | |   |__  /  \n");
@@ -663,11 +644,11 @@ if (operacao_unimedida == 4){
             scanf("%f", &kg);
             g = kg * 1000;
             printf("\n-----------------------------");
-            printf("\n VALOR EM GRAMA: %.2f g",g);
+            printf("\n VALOR EM GRAMA: %.2f g", g);
             printf("\n-----------------------------");
         }
 
-        if(operacao_peso == 2){
+        if (operacao_peso == 2) {
             system("cls");
             printf("  ____  _  ___   _ _     _____  \n");
             printf(" / ___|| |/ / | | | |   |__  /  \n");
@@ -679,11 +660,11 @@ if (operacao_unimedida == 4){
             scanf("%f", &kg);
             mg = kg * 1000000;
             printf("\n----------------------------------");
-            printf("\n VALOR EM MILIGRAMA: %.2f mg",mg);
+            printf("\n VALOR EM MILIGRAMA: %.2f mg", mg);
             printf("\n----------------------------------");
         }
 
-        if(operacao_peso == 3){
+        if (operacao_peso == 3) {
             system("cls");
             printf("  ____  _  ___   _ _     _____  \n");
             printf(" / ___|| |/ / | | | |   |__  /  \n");
@@ -695,11 +676,11 @@ if (operacao_unimedida == 4){
             scanf("%f", &g);
             kg = g / 1000;
             printf("\n-------------------------------");
-            printf("\n VALOR EM QUILOGRAMA: %.3f kg",kg);
+            printf("\n VALOR EM QUILOGRAMA: %.3f kg", kg);
             printf("\n-------------------------------");
         }
 
-        if(operacao_peso == 4){
+        if (operacao_peso == 4) {
             system("cls");
             printf("  ____  _  ___   _ _     _____  \n");
             printf(" / ___|| |/ / | | | |   |__  /  \n");
@@ -711,11 +692,11 @@ if (operacao_unimedida == 4){
             scanf("%f", &g);
             mg = g * 1000;
             printf("\n----------------------------------");
-            printf("\n VALOR EM MILIGRAMA: %.2f mg",mg);
+            printf("\n VALOR EM MILIGRAMA: %.2f mg", mg);
             printf("\n----------------------------------");
         }
 
-        if(operacao_peso == 5){
+        if (operacao_peso == 5) {
             system("cls");
             printf("  ____  _  ___   _ _     _____  \n");
             printf(" / ___|| |/ / | | | |   |__  /  \n");
@@ -725,13 +706,13 @@ if (operacao_unimedida == 4){
             printf("| Miligrama (mg) --> Quilograma (kg) |\n\n");
             printf(" Digite o valor do peso (mg): ");
             scanf("%f", &mg);
-            kg = mg * 1000000;
+            kg = mg / 1000000;
             printf("\n-------------------------------");
-            printf("\n VALOR EM QUILOGRAMA: %.2f kg",kg);
+            printf("\n VALOR EM QUILOGRAMA: %.2f kg", kg);
             printf("\n-------------------------------");
         }
 
-        if(operacao_peso == 6){
+        if (operacao_peso == 6) {
             system("cls");
             printf("  ____  _  ___   _ _     _____  \n");
             printf(" / ___|| |/ / | | | |   |__  /  \n");
@@ -743,97 +724,86 @@ if (operacao_unimedida == 4){
             scanf("%f", &mg);
             g = mg / 1000;
             printf("\n-----------------------------");
-            printf("\n VALOR EM GRAMA: %.2f g",g);
+            printf("\n VALOR EM GRAMA: %.2f g", g);
             printf("\n-----------------------------");
         }
-
-}
-
-if(funcao == 3){
-    system("cls");
-    printf("  ____  _  ___   _ _     _____  \n");
-    printf(" / ___|| |/ / | | | |   |__  /  \n");
-    printf(" \\___ \\| ' /| | | | |     / /   \n");
-    printf("  ___) | . \\| |_| | |___ / /_   \n");
-    printf(" |____/|_|\\_\\\\___/|_____/____|  \n\n\n");
-    printf("| CALCULO IMC |\n\n");
-    printf("Digite sua altura (M): ");
-    scanf("%f", &altura);
-    printf("\n");
-
-    printf("Digite seu peso (Kg): ");
-    scanf("%f", &peso);
-    imc = peso/(altura * altura);
-    printf("\n----------------------\n");
-    printf(" IMC: ");
-    printf("%.2f\n", imc);
-
-    if (imc < 18.5 ){
-    printf("\n----------------------\n");
-    printf("\n Baixo Peso\n");
-    }
-    else if (imc >= 18.5 && imc < 25){
-    printf("\n Peso Adequado\n");
-    printf("----------------------\n");
-    }
-    else if (imc >= 25 && imc <30){
-    printf("\n Sobrepeso\n");
-    printf("----------------------\n");
-    }
-    else if (imc >= 30 && imc < 35){
-    printf("\n Obesidade Grau 1\n");
-    printf("----------------------\n");
-    }
-    else if (imc >= 35 && imc < 40){
-    printf("\n Obesidade Grau 2\n");
-    printf("----------------------\n");
-    }
-    else if (imc >= 40){
-    printf("\n Obesidade Grau 3\n");
-    printf("----------------------\n");
-    }
-}
-
-if(funcao == 4){
-    system("cls");
-    printf("  ____  _  ___   _ _     _____  \n");
-    printf(" / ___|| |/ / | | | |   |__  /  \n");
-    printf(" \\___ \\| ' /| | | | |     / /   \n");
-    printf("  ___) | . \\| |_| | |___ / /_   \n");
-    printf(" |____/|_|\\_\\\\___/|_____/____|  \n\n\n");
-    printf(" | CHUTAR ALTERNATIVAS |\n\n");
-    int numero;
-            printf(" Quantas alternativas tem a questão?: ");
-            scanf("%d", &numero);
-            int sorteio = 1 + (rand() % numero);
-            printf("\n Número sorteado: %d\n", sorteio);
     }
 
+    if (funcao == 3) {
+        system("cls");
+        printf("  ____  _  ___   _ _     _____  \n");
+        printf(" / ___|| |/ / | | | |   |__  /  \n");
+        printf(" \\___ \\| ' /| | | | |     / /   \n");
+        printf("  ___) | . \\| |_| | |___ / /_   \n");
+        printf(" |____/|_|\\_\\\\___/|_____/____|  \n\n\n");
+        printf("| CALCULO IMC |\n\n");
+        printf("Digite sua altura (M): ");
+        scanf("%f", &altura);
+        printf("\n");
+        printf("Digite seu peso (Kg): ");
+        scanf("%f", &peso);
+        imc = peso / (altura * altura);
+        printf("\n----------------------\n");
+        printf(" IMC: ");
+        printf("%.2f\n", imc);
 
-if(funcao == 5){
-    system("cls");
-    printf("  ____  _  ___   _ _     _____  \n");
-    printf(" / ___|| |/ / | | | |   |__  /  \n");
-    printf(" \\___ \\| ' /| | | | |     / /   \n");
-    printf("  ___) | . \\| |_| | |___ / /_   \n");
-    printf(" |____/|_|\\_\\\\___/|_____/____|  \n\n\n");
-    printf(" | SIM ou NÃO |\n\n");
-    int sorteio = rand() % 2;
-            printf(sorteio == 0 ? "      SIM\n" : "      NÃO\n");
+        if (imc < 18.5) {
+            printf("\n----------------------\n");
+            printf("\n Baixo Peso\n");
+        } else if (imc >= 18.5 && imc < 25) {
+            printf("\n Peso Adequado\n");
+            printf("----------------------\n");
+        } else if (imc >= 25 && imc < 30) {
+            printf("\n Sobrepeso\n");
+            printf("----------------------\n");
+        } else if (imc >= 30 && imc < 35) {
+            printf("\n Obesidade Grau 1\n");
+            printf("----------------------\n");
+        } else if (imc >= 35 && imc < 40) {
+            printf("\n Obesidade Grau 2\n");
+            printf("----------------------\n");
+        } else if (imc >= 40) {
+            printf("\n Obesidade Grau 3\n");
+            printf("----------------------\n");
+        }
+    }
 
-}
+    if (funcao == 4) {
+        system("cls");
+        printf("  ____  _  ___   _ _     _____  \n");
+        printf(" / ___|| |/ / | | | |   |__  /  \n");
+        printf(" \\___ \\| ' /| | | | |     / /   \n");
+        printf("  ___) | . \\| |_| | |___ / /_   \n");
+        printf(" |____/|_|\\_\\\\___/|_____/____|  \n\n\n");
+        printf(" | CHUTAR ALTERNATIVAS |\n\n");
+        printf(" Quantas alternativas tem a questão?: ");
+        scanf("%d", &numero);
+        sorteio = 1 + (rand() % numero);
+        printf("\n Número sorteado: %d\n", sorteio);
+    }
 
+    if (funcao == 5) {
+        system("cls");
+        printf("  ____  _  ___   _ _     _____  \n");
+        printf(" / ___|| |/ / | | | |   |__  /  \n");
+        printf(" \\___ \\| ' /| | | | |     / /   \n");
+        printf("  ___) | . \\| |_| | |___ / /_   \n");
+        printf(" |____/|_|\\_\\\\___/|_____/____|  \n\n\n");
+        printf(" | SIM ou NÃO |\n\n");
+        sorteio = rand() % 2;
+        printf(sorteio == 0 ? "      SIM\n" : "      NÃO\n");
+    }
 
-printf("\n=====================================");
-printf("\n Fim do programa...\n");
-printf("\n Deseja voltar ao início? (s/n): ");
-scanf(" %c", &resposta);
-printf("\n=====================================\n\n");
-printf(" ==========================");
-printf("\n | SKULZ made by Enzima01 |\n");
-printf(" ==========================");
+    printf("\n=====================================");
+    printf("\n Fim do programa...\n");
+    printf("\n Deseja voltar ao início? (s/n): ");
+    scanf(" %c", &resposta);
+    printf("\n=====================================\n\n");
+    printf(" ==========================");
+    printf("\n | SKULZ made by Enzima01 |\n");
+    printf(" ==========================");
 
-if (resposta == 's' || resposta == 'S'){
+    if (resposta == 's' || resposta == 'S'){
     goto inicio;
 }
 else{
@@ -962,4 +932,3 @@ printf("\n\n\n");
 return 0;
 }
 }
-
