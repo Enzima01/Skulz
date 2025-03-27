@@ -242,22 +242,22 @@ if(operation_unimedida == 1){
         printf(" |____/|_|\\_\\\\___/|_____/____|  \n\n\n");
         printf("| TEMPERATURE CONVERTER | \n\n\n");
 
-        printf("          |CELSIUS(캜)|\n");
+        printf("          |CELSIUS(째C)|\n");
         printf(" -----------------------------------");
-        printf("\n 1) Celsius(캜) --> Fahrenheit(캟)\n");
-        printf("\n 2) Celsius(캜) --> Kelvin(K)\n");
+        printf("\n 1) Celsius(째C) --> Fahrenheit(째F)\n");
+        printf("\n 2) Celsius(째C) --> Kelvin(K)\n");
         printf(" -----------------------------------\n\n");
 
-        printf("          |FAHRENHEIT(캟)|\n");
+        printf("          |FAHRENHEIT(째F)|\n");
         printf(" -----------------------------------\n");
-        printf(" 3) Fahrenheit(캟) --> Celsius(캜)\n");
-        printf("\n 4) Fahrenheit(캟) --> Kelvin(K)\n");
+        printf(" 3) Fahrenheit(째F) --> Celsius(째C)\n");
+        printf("\n 4) Fahrenheit(째F) --> Kelvin(K)\n");
         printf(" -----------------------------------\n\n");
 
         printf("            |KELVIN(K)|\n");
         printf(" -----------------------------------\n");
-        printf(" 5) Kelvin(K) --> Celsius(캜) \n");
-        printf("\n 6) Kelvin(K) --> Fahrenheit(캟)\n");
+        printf(" 5) Kelvin(K) --> Celsius(째C) \n");
+        printf("\n 6) Kelvin(K) --> Fahrenheit(째F)\n");
         printf(" -----------------------------------\n\n");
 
         printf("Type the number (1-6) for the specific operation: ");
@@ -271,12 +271,12 @@ if(operation_unimedida == 1){
             printf(" \\___ \\| ' /| | | | |     / /   \n");
             printf("  ___) | . \\| |_| | |___ / /_   \n");
             printf(" |____/|_|\\_\\\\___/|_____/____|  \n\n\n");
-            printf("| Celsius(캜) --> Fahrenheit(캟) |\n\n");
-            printf(" Type the temperature value (캜): ");
+            printf("| Celsius(째C) --> Fahrenheit(째F) |\n\n");
+            printf(" Type the temperature value (째C): ");
             scanf("%d", &celsius_1);
             fahrenheit_1 = (celsius_1 * 9/5) + 32;
             printf("\n-----------------------------");
-            printf("\n VALUE IN FAHRENHEIT: %d캟",fahrenheit_1);
+            printf("\n VALUE IN FAHRENHEIT: %d째F",fahrenheit_1);
             printf("\n-----------------------------");
         }
 
@@ -287,8 +287,8 @@ if(operation_unimedida == 1){
             printf(" \\___ \\| ' /| | | | |     / /   \n");
             printf("  ___) | . \\| |_| | |___ / /_   \n");
             printf(" |____/|_|\\_\\\\___/|_____/____|  \n\n\n");
-            printf("| Celsius(캜) --> Kelvin(K) |\n\n");
-            printf(" Type the temperature value (캜): ");
+            printf("| Celsius(째C) --> Kelvin(K) |\n\n");
+            printf(" Type the temperature value (째C): ");
             scanf("%d", &celsius_1);
             kelvin_1 = celsius_1 + 273;
             printf("\n-----------------------------");
@@ -303,12 +303,12 @@ if(operation_unimedida == 1){
             printf(" \\___ \\| ' /| | | | |     / /   \n");
             printf("  ___) | . \\| |_| | |___ / /_   \n");
             printf(" |____/|_|\\_\\\\___/|_____/____|  \n\n\n");
-            printf("| Fahrenheit(캟) --> Celsius(캜) |\n\n");
-            printf(" Type the temperature value (캟): ");
+            printf("| Fahrenheit(째F) --> Celsius(째C) |\n\n");
+            printf(" Type the temperature value (째F): ");
             scanf("%d", &fahrenheit_1);
             celsius_1 = (fahrenheit_1 - 32) * 5/9;
             printf("\n-----------------------------");
-            printf("\n VALUE IN CELSIUS: %d캜",celsius_1);
+            printf("\n VALUE IN CELSIUS: %d째C",celsius_1);
             printf("\n-----------------------------");
 
         }
@@ -320,12 +320,12 @@ if(operation_unimedida == 1){
             printf(" \\___ \\| ' /| | | | |     / /   \n");
             printf("  ___) | . \\| |_| | |___ / /_   \n");
             printf(" |____/|_|\\_\\\\___/|_____/____|  \n\n\n");
-            printf("| Fahrenheit(캟) --> Kelvin(K) |\n\n");
-            printf(" Type the temperature value (캟): ");
+            printf("| Fahrenheit(째F) --> Kelvin(K) |\n\n");
+            printf(" Type the temperature value (째F): ");
             scanf("%d", &fahrenheit_1);
             kelvin_1 = (fahrenheit_1 - 32) * 5/9 + 273;
             printf("\n-----------------------------");
-            printf("\n VALUE IN KELVIN: %d캩",kelvin_1);
+            printf("\n VALUE IN KELVIN: %d째K",kelvin_1);
             printf("\n-----------------------------");
 
         }
@@ -337,12 +337,12 @@ if(operation_unimedida == 1){
             printf(" \\___ \\| ' /| | | | |     / /   \n");
             printf("  ___) | . \\| |_| | |___ / /_   \n");
             printf(" |____/|_|\\_\\\\___/|_____/____|  \n\n\n");
-            printf("| Kelvin(K) --> Celsius(캜) |\n\n");
+            printf("| Kelvin(K) --> Celsius(째C) |\n\n");
             printf(" Type the temperature value (K): ");
             scanf("%d", &kelvin_1);
             celsius_1 = kelvin_1 - 273;
             printf("\n-----------------------------");
-            printf("\n VALUE IN CELSIUS: %d캜",celsius_1);
+            printf("\n VALUE IN CELSIUS: %d째C",celsius_1);
             printf("\n-----------------------------");
 
         }
@@ -354,12 +354,12 @@ if(operation_unimedida == 1){
             printf(" \\___ \\| ' /| | | | |     / /   \n");
             printf("  ___) | . \\| |_| | |___ / /_   \n");
             printf(" |____/|_|\\_\\\\___/|_____/____|  \n\n\n");
-            printf("| Kelvin(K) --> Fahrenheit(캟) |\n\n");
+            printf("| Kelvin(K) --> Fahrenheit(째F) |\n\n");
             printf(" Type the temperature value (K): ");
             scanf("%d", &kelvin_1);
             fahrenheit_1 = (kelvin_1 - 273) * 9/5 + 32;
             printf("\n-----------------------------");
-            printf("\n VALUE IN FAHRENHEIT: %d캟",fahrenheit_1);
+            printf("\n VALUE IN FAHRENHEIT: %d째F",fahrenheit_1);
             printf("\n-----------------------------");
 
         }
