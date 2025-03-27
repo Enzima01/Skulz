@@ -16,7 +16,7 @@ O nome **Skulz** é um trocadilho entre **"School"** (escola) e **"Skull"** (cav
 📢 Se gostou, deixe uma estrela ⭐ no repositório!
 
 
-# ENG |
+# ENG 
 
 # Skulz 💀
 
