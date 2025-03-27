@@ -12,7 +12,7 @@ O nome **Skulz** é um trocadilho entre **"School"** (escola) e **"Skull"** (cav
 - ✅ **Sim ou Não**
 - 🥔 **Easter Egg escondido!**
 
-📢 Se gostou, deixe uma estrela ⭐ no repositório!
+
 
 
 # ENG 
@@ -31,5 +31,5 @@ The name **Skulz** is a wordplay between **"School"** and **"Skull"**, combining
 - ✅ **Yes or No Decision Maker**
 - 🥔 **Hidden Easter Egg!**
 
-📢 **If you like it, give a ⭐ to the repository!**
+
 
